@@ -5,9 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.Optional;
 
 @SpringBootTest
 class StudentRepositoryTest {
@@ -49,7 +47,31 @@ class StudentRepositoryTest {
 //        students.forEach(s->{System.out.println(s);});
 //    }
 
-    //
+    //----------------------------------Update-----------------------------
+
+//    @Test
+//    public void updateStudent_1(){
+//        Student s = repository.findStudentByName("Tom");
+//        s.setStudentId(s.getStudentId());
+//        s.setName("Tim");
+//        s.setAge(s.getAge());
+//        repository.save(s);
+//    }
+
+//    @Test
+//    public void updateStudent_2(){
+//        repository.UpdateStudentById("Tommy",Long.valueOf(3));
+//    }
+
+//    @Test
+//    public void updateStudent_3(){
+//        repository.UpdateStudentById2("Ken",Long.valueOf(2));
+//    }
+
+    //----------------------------Delete----------------------------
+
+//    @Test
+//    public void deleteStudent_1()
 
 
 

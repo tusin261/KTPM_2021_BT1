@@ -13,6 +13,7 @@ import java.util.List;
 @Repository
 public interface StudentRepository extends CrudRepository<Student,Long> {
 
+    Student findStudentByName(String name);
     //Insert = Native Query & JPQL
     @Transactional
     @Modifying
@@ -28,6 +29,14 @@ public interface StudentRepository extends CrudRepository<Student,Long> {
 
 
     //Update = Native Query & JPQL
+    @Transactional
+    @Modifying
+    @Query(value = "update student set name = :name where student_id=:id", nativeQuery = true)
+    void UpdateStudentById(@Param("name") String name, @Param("id") long id);
 
+    @Transactional
+    @Modifying
+    @Query("update Student s set s.name = :name where s.studentId = :id")
+    void UpdateStudentById2(@Param("name") String name, @Param("id") long id);
 
 }
