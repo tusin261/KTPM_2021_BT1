@@ -71,7 +71,21 @@ class StudentRepositoryTest {
     //----------------------------Delete----------------------------
 
 //    @Test
-//    public void deleteStudent_1()
+//    public void deleteStudent_1(){
+//        repository.deleteById(Long.valueOf(4));
+//    }
+
+//    @Test
+//    public void deleteStudent_2(){
+//        repository.deleteStudent2(Long.valueOf(6));
+//        System.out.println("Thanh cong");
+//    }
+
+//    @Test
+//    public void deleteStudent_3(){
+//        repository.deleteStudent3(Long.valueOf(7));
+//        System.out.println("Thanh cong");
+//    }
 
 
 

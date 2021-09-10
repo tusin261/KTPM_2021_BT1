@@ -39,4 +39,15 @@ public interface StudentRepository extends CrudRepository<Student,Long> {
     @Query("update Student s set s.name = :name where s.studentId = :id")
     void UpdateStudentById2(@Param("name") String name, @Param("id") long id);
 
+    //Delete = Native Query & JPQL
+    @Transactional
+    @Modifying
+    @Query(value ="delete from student where student_id = :id" ,nativeQuery = true)
+    void deleteStudent2(@Param("id") long id);
+
+    @Transactional
+    @Modifying
+    @Query("delete from Student s where s.studentId=:id")
+    void deleteStudent3(@Param("id") long id);
+
 }
